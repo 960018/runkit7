@@ -23,6 +23,7 @@
 #endif
 
 #include "php.h"
+#include "zend_type_code.h"
 
 #include "php_ini.h"
 #include "ext/standard/info.h"
@@ -192,10 +193,6 @@ static inline void *runkit_zend_hash_add_or_update_ptr(HashTable *ht, zend_strin
 
 #ifndef Z_ADDREF_P
 #     define Z_ADDREF_P(x)                           ZVAL_ADDREF(x)
-#endif
-
-#ifndef IS_CONSTANT_AST
-#define IS_CONSTANT_AST IS_CONSTANT_ARRAY
 #endif
 
 /* runkit_functions.c */
