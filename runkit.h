@@ -23,7 +23,6 @@
 #endif
 
 #include "php.h"
-#include "zend_type_code.h"
 
 #include "php_ini.h"
 #include "ext/standard/info.h"
