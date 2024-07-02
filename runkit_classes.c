@@ -206,7 +206,9 @@ int php_runkit_class_copy(zend_class_entry *src, zend_string *classname)
 	new_class_entry->parent = parent;
 	new_class_entry->info.user.filename = src->info.user.filename;
 	new_class_entry->info.user.line_start = src->info.user.line_start;
+#if PHP_VERSION_ID < 80400
 	new_class_entry->info.user.doc_comment = src->info.user.doc_comment;
+#endif
 	new_class_entry->info.user.line_end = src->info.user.line_end;
 	new_class_entry->num_traits = src->num_traits;
 #if PHP_VERSION_ID >= 70400
